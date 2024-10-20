@@ -1,16 +1,34 @@
 ---
-
+import { MAIN_SKILLS, COMPETENT_SKILLS } from "../constants/skills";
+import {
+  Header,
+  Intro,
+  AnimatedSection,
+  Skills,
+  Experiences,
+  Contacts,
+} from "../components/organisms";
+import "../styles/index.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Juratbek Makhammadaliev</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Intro />
+      <AnimatedSection text="with 4 years of experience" />
+      <AnimatedSection text="in big projects, with big teams" />
+      <Skills skills={MAIN_SKILLS} title="skills" />
+      <Skills skills={COMPETENT_SKILLS} title="competent skills" />
+      <Experiences />
+      <Contacts />
+    </main>
+  </body>
 </html>

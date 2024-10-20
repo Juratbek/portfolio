@@ -1,0 +1,23 @@
+:root {
+  --black-100: #313131;
+  --black-200: #232323;
+
+  --blue-100: #00d8ff;
+
+  --bg: var(--black-200);
+  --text: #fff;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

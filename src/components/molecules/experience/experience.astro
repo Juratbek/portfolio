@@ -1,0 +1,45 @@
+---
+import type { Experience } from "../../../constants/experience";
+
+type Props = Experience;
+
+const { company, jobs, from, to } = Astro.props;
+---
+
+<div class="container">
+  <div class="date">{from} - {to}</div>
+  <h3 class="company">{company}</h3>
+  <ul class="jobs">
+    {jobs.map((job) => <li class="job">{job}</li>)}
+  </ul>
+</div>
+
+<style>
+  .container {
+    position: relative;
+  }
+
+  .date {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    transform: translateX(-100%);
+    max-width: 100px;
+    font-size: 14px;
+  }
+
+  .company {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .jobs {
+    margin-top: 20px;
+    line-height: 22px;
+    padding-left: 24px;
+  }
+
+  .job {
+    margin-bottom: 8px;
+  }
+</style>

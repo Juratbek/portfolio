@@ -1,0 +1,33 @@
+.container {
+  max-width: 1440px;
+}
+
+.full-screen {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section-heading {
+  font-size: 56px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -1,0 +1,50 @@
+---
+import { EXPERIENCES } from "../../../constants/experience";
+import { Experience } from "../../molecules";
+---
+
+<section class="container" id="experience">
+  <div class="line">
+    <div class="dot"></div>
+  </div>
+  <div class="experiences">
+    {
+      EXPERIENCES.map((experience) => (
+        <div class="experience">
+          <Experience {...experience} />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .container {
+    width: 900px;
+    max-width: 80vw;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .line {
+    position: absolute;
+    width: 3px;
+    border-radius: 10px;
+    background-color: white;
+    top: 15px;
+    bottom: 0;
+    left: -30px;
+  }
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: var(--blue-100);
+    transform: translate(-46%, -46%);
+  }
+
+  .experience {
+    margin-bottom: 400px;
+  }
+</style>

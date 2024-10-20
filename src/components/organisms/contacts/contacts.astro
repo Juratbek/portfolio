@@ -1,0 +1,57 @@
+---
+import { Telegram, Mail } from "../../logos";
+---
+
+<section
+  id="contacts"
+  class="full-screen flex-col flex items-center justify-center"
+>
+  <h2 class="uppercase section-heading">Contacts</h2>
+  <div class="contacts">
+    <a class="contact" href="https://t.me/JuratbekBahodirovich" target="_blank">
+      <span class="logo">
+        <Telegram />
+      </span>
+      <p>Telegram</p>
+    </a>
+    <div class="line"></div>
+    <a class="contact" href="mailto:juratbektfi1998@gmail.com" target="_blank">
+      <span class="logo">
+        <Mail />
+      </span>
+      <p>Gmail</p>
+    </a>
+  </div>
+</section>
+
+<style>
+  .contacts {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .contact {
+    flex: 0 1;
+    padding: 16px 24px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .contact:hover {
+    background-color: var(--black-100);
+    cursor: pointer;
+  }
+
+  .line {
+    width: 2px;
+    background-color: white;
+  }
+</style>

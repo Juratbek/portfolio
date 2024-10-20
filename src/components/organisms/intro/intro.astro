@@ -1,0 +1,67 @@
+<section class="container">
+  <div class="big-text software">software</div>
+  <div class="big-text engineer">engineer</div>
+  <div class="big-text engineer outline">engineer</div>
+  <div class="img-container">
+    <img src="/public/man.png" alt="Juratbek Makhammadaliev" />
+  </div>
+  <div class="bottom-shadow"></div>
+</section>
+<style>
+  .container {
+    position: relative;
+    height: 100vh;
+  }
+
+  .big-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 200px;
+  }
+
+  .software {
+    top: 200px;
+  }
+
+  .engineer {
+    top: 430px;
+  }
+
+  .outline {
+    z-index: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
+
+  .img-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  .img-container img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .bottom-shadow {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    background: linear-gradient(
+      0deg,
+      #232323 0%,
+      rgba(35, 35, 35, 0.93) 24.72%,
+      rgba(35, 35, 35, 0) 100%
+    );
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+import type { Skill } from "../../../constants/skills";
+
+interface Props {
+  skills: Skill[];
+  title: string;
+}
+
+const { skills, title } = Astro.props;
+---
+
+<section class="container full-screen" id="skills">
+  <h2 class="uppercase section-heading header">{title}</h2>
+  <div class="skills">
+    {
+      skills.map((skill) => {
+        const { component: Img, top, left } = skill.img;
+
+        return (
+          <div class="skill">
+            <h4 class="name">{skill.name}</h4>
+            <div
+              class="logo-container"
+              style={`top: ${top}px; left: ${left}px;`}
+            >
+              <Img />
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
+
+<style>
+  .container {
+    padding: 82px 0;
+  }
+
+  .header {
+    margin: 0 0 68px 0;
+  }
+
+  .skills {
+    width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 50px;
+  }
+
+  .skill {
+    position: relative;
+    width: 300px;
+    min-height: 250px;
+    border-radius: 8px;
+    background: var(--black-100);
+    padding: 24px 28px;
+    overflow: hidden;
+  }
+
+  .name {
+    margin: 0;
+    font-size: 32px;
+  }
+
+  .logo-container {
+    position: absolute;
+  }
+</style>
