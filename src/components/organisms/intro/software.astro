@@ -1,0 +1,91 @@
+<div class="software container">
+  <span class="s">s</span>
+  <span class="o">o</span>
+  <span class="overflowed-container">
+    <span style="opacity: 0">f</span>
+    <span class="f">f</span>
+  </span>
+  <span class="t">t</span>
+  <span class="w">w</span>
+  <span class="overflowed-container">
+    <span style="opacity: 0;">a</span>
+    <span class="a">a</span>
+  </span>
+  <span class="overflowed-container">
+    <span style="opacity: 0">r</span>
+    <span class="r">r</span>
+  </span>
+  <span class="overflowed-container">
+    <span style="opacity: 0">e</span>
+    <span class="e">e</span>
+  </span>
+</div>
+
+<script>
+  import { animateFirstWord } from "./animations";
+
+  animateFirstWord();
+</script>
+
+<style>
+  .container {
+    line-height: 140px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .s {
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+  }
+
+  .o {
+    transform: rotateY(90deg);
+  }
+
+  .f {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+  }
+
+  .t {
+    transform: scale(0);
+  }
+
+  .w {
+    transform: rotateX(90deg);
+  }
+
+  .a {
+    transform-origin: -20px;
+    transform: rotate(200deg);
+    position: absolute;
+    inset: 0;
+  }
+
+  .r {
+    position: absolute;
+    left: 0;
+    bottom: -101%;
+  }
+
+  .e {
+    position: absolute;
+    left: -100%;
+  }
+
+  .overflowed-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .software {
+    top: 200px;
+  }
+</style>
