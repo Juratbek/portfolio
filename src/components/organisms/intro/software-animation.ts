@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-export function animateFirstWord() {
+export function animateSoftwareWord() {
   animateS();
   animateO(1);
   animateF(0.5);
@@ -14,13 +14,13 @@ export function animateFirstWord() {
 function animateS() {
   const sAnimationDuration = 0.5;
 
-  gsap.to(".s", {
+  gsap.to("#intro_software .s", {
     duration: sAnimationDuration / 2,
     rotationX: 180,
     ease: "none",
     transformOrigin: "bottom",
   });
-  gsap.to(".s", {
+  gsap.to("#intro_software .s", {
     duration: sAnimationDuration / 2,
     delay: sAnimationDuration / 2,
     rotationX: 0,
@@ -32,7 +32,7 @@ function animateS() {
 }
 
 function animateO(delay: number) {
-  gsap.to(".o", {
+  gsap.to("#intro_software .o", {
     duration: 0.5,
     rotationY: 720,
     delay,
@@ -41,7 +41,7 @@ function animateO(delay: number) {
 }
 
 function animateF(delay: number) {
-  gsap.to(".f", {
+  gsap.to("#intro_software .f", {
     duration: 0.5,
     left: 0,
     delay,
@@ -50,7 +50,7 @@ function animateF(delay: number) {
 }
 
 function animateT(delay: number) {
-  gsap.to(".t", {
+  gsap.to("#intro_software .t", {
     scale: 1,
     duration: 1,
     delay: delay,
@@ -59,7 +59,7 @@ function animateT(delay: number) {
 }
 
 function animateW(delay: number) {
-  gsap.to(".w", {
+  gsap.to("#intro_software .w", {
     duration: 0.5,
     rotateX: 720,
     delay,
@@ -68,7 +68,7 @@ function animateW(delay: number) {
 }
 
 function animateA(delay: number) {
-  gsap.to(".a", {
+  gsap.to("#intro_software .a", {
     duration: 0.5,
     rotate: 0,
     delay,
@@ -76,7 +76,7 @@ function animateA(delay: number) {
 }
 
 function animateR(delay: number) {
-  gsap.to(".r", {
+  gsap.to("#intro_software .r", {
     duration: 0.5,
     bottom: 0,
     delay,
@@ -84,9 +84,13 @@ function animateR(delay: number) {
 }
 
 function animateE(delay: number) {
-  gsap.to(".e", {
+  gsap.to("#intro_software .e", {
     duration: 0.7,
     left: 0,
     delay,
   });
 }
+
+const g = new Proxy(gsap, { apply: console.log });
+
+g.to(".a", {});

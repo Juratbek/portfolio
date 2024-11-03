@@ -1,0 +1,94 @@
+<div class="container" id="engineer">
+  <span class="overflowed-container">
+    <span class="first-e above">e</span>
+    <span style="opacity: 0">e</span>
+    <span class="first-e below">e</span>
+  </span>
+  <span class="overflowed-container">
+    <span class="first-n above">n</span>
+    <span style="opacity: 0">n</span>
+    <span class="first-n below">n</span>
+  </span>
+  <span class="overflowed-container">
+    <span style="opacity: 0">g</span>
+    <span class="g overflowed-letter">g</span>
+  </span>
+  <span class="i">i</span>
+  <span class="second-n">n</span>
+  <span class="overflowed-container">
+    <span style="opacity: 0;">e</span>
+    <span class="second-e overflowed-letter">e</span>
+  </span>
+  <span class="overflowed-container">
+    <span style="opacity: 0;">e</span>
+    <span class="third-e overflowed-letter">e</span>
+  </span>
+  <span class="overflowed-container">
+    <span style="opacity: 0">r</span>
+    <span class="r overflowed-letter">r</span>
+  </span>
+</div>
+
+<script>
+  import { animateEngineerWord } from "./engineer-animation";
+
+  animateEngineerWord();
+</script>
+
+<style lang="scss">
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overflowed-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .overflowed-letter {
+    position: absolute;
+    inset: 0;
+  }
+
+  .first-e,
+  .first-n {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.above {
+      transform: translateY(-102%);
+    }
+    &.below {
+      transform: translateY(102%);
+    }
+  }
+
+  .g {
+    transform-origin: -40px;
+    transform: rotate(200deg);
+  }
+
+  .i {
+    opacity: 0;
+  }
+
+  .second-n {
+    transform: scale(0);
+  }
+
+  .second-e {
+    transform: translateX(100%);
+  }
+
+  .third-e {
+    transform: rotateY(90deg);
+  }
+
+  .r {
+    transform: translateY(101%);
+  }
+</style>

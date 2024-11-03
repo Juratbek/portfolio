@@ -1,13 +1,19 @@
 ---
 import Software from "./software.astro";
+import Engineer from "./engineer.astro";
 ---
 
 <section class="container">
-  <div class="big-text">
+  <div class="big-text software">
     <Software />
   </div>
-  <div class="big-text engineer">engineer</div>
-  <div class="big-text engineer outline">engineer</div>
+  <div class="big-text engineer">
+    <Engineer />
+  </div>
+  <div class="big-text engineer outline">
+    <Engineer />
+  </div>
+  <!-- <div class="big-text engineer outline">engineer</div> -->
   <div class="img-container">
     <img src="/public/man.png" alt="Juratbek Makhammadaliev" />
   </div>
@@ -18,23 +24,25 @@ import Software from "./software.astro";
   .container {
     position: relative;
     height: 100vh;
+    width: 100%;
+    display: block;
   }
 
   .big-text {
-    line-height: 140px;
+    line-height: 148px;
     position: absolute;
     left: 0;
     right: 0;
-    text-align: center;
     text-transform: uppercase;
     font-size: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+
+  .software {
+    top: 30vh;
   }
 
   .engineer {
-    top: 430px;
+    top: 55vh;
   }
 
   .outline {

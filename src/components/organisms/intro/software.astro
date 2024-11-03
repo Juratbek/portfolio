@@ -1,4 +1,4 @@
-<div class="software container">
+<div class="container" id="intro_software">
   <span class="s">s</span>
   <span class="o">o</span>
   <span class="overflowed-container">
@@ -22,17 +22,13 @@
 </div>
 
 <script>
-  import { animateFirstWord } from "./animations";
+  import { animateSoftwareWord } from "./software-animation";
 
-  animateFirstWord();
+  animateSoftwareWord();
 </script>
 
 <style>
   .container {
-    line-height: 140px;
-    position: absolute;
-    left: 0;
-    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +68,7 @@
   .r {
     position: absolute;
     left: 0;
-    bottom: -101%;
+    bottom: -102%;
   }
 
   .e {
@@ -83,9 +79,5 @@
   .overflowed-container {
     position: relative;
     overflow: hidden;
-  }
-
-  .software {
-    top: 200px;
   }
 </style>
